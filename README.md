@@ -1,3 +1,23 @@
-# Anomaly-Detection-in-Sheep-Behavior-Using-YOLO-V8-and-Faster-R-CNN
+#Anomaly Detection in Sheep Behavior Using YOLO-V8 and Faster R-CNN
+This project focuses on detecting anomalous behavior in sheep, specifically prolonged sitting activity within video frames. The dataset was collected from Pakistani farms and used to train a model for sheep activity detection. The implementation utilizes a pre-trained model ("best.pt") as the foundation for behavior analysis.
+Project Overview
+The system incorporates a frontend interface that enables users to:
 
-𝘛𝘩𝘰𝘶𝘨𝘩 𝘮𝘺 𝘷𝘪𝘴𝘪𝘰𝘯 𝘵𝘳𝘢𝘯𝘴𝘤𝘦𝘯𝘥𝘦𝘥 𝘤𝘰𝘯𝘷𝘦𝘯𝘵𝘪𝘰𝘯𝘢𝘭 𝘣𝘰𝘶𝘯𝘥𝘢𝘳𝘪𝘦𝘴, 𝘐 𝘧𝘢𝘤𝘦𝘥 𝘳𝘦𝘢𝘭-𝘸𝘰𝘳𝘭𝘥 𝘤𝘰𝘯𝘴𝘵𝘳𝘢𝘪𝘯𝘵𝘴. 𝘠𝘦𝘵 𝘵𝘩𝘪𝘴 𝘱𝘳𝘰𝘫𝘦𝘤𝘵 𝘮𝘢𝘳𝘬𝘴 𝘫𝘶𝘴𝘵 𝘵𝘩𝘦 𝘣𝘦𝘨𝘪𝘯𝘯𝘪𝘯𝘨 𝘰𝘧 𝘮𝘺 𝘫𝘰𝘶𝘳𝘯𝘦𝘺 𝘪𝘯 𝘳𝘦𝘴𝘦𝘢𝘳𝘤𝘩. 𝘞𝘩𝘪𝘭𝘦 𝘵𝘩𝘦𝘳𝘦 𝘮𝘢𝘺 𝘣𝘦 𝘢𝘳𝘦𝘢𝘴 𝘧𝘰𝘳 𝘪𝘮𝘱𝘳𝘰𝘷𝘦𝘮𝘦𝘯𝘵, 𝘐 𝘵𝘰𝘰𝘬 𝘰𝘸𝘯𝘦𝘳𝘴𝘩𝘪𝘱 𝘰𝘧 𝘦𝘷𝘦𝘳𝘺 𝘢𝘴𝘱𝘦𝘤𝘵, 𝘧𝘳𝘰𝘮 𝘥𝘢𝘵𝘢𝘴𝘦𝘵 𝘤𝘳𝘦𝘢𝘵𝘪𝘰𝘯 𝘵𝘰 𝘷𝘪𝘥𝘦𝘰 𝘱𝘪𝘱𝘦𝘭𝘪𝘯𝘦 𝘪𝘮𝘱𝘭𝘦𝘮𝘦𝘯𝘵𝘢𝘵𝘪𝘰𝘯. 𝘛𝘩𝘪𝘴 𝘸𝘢𝘴𝘯'𝘵 𝘫𝘶𝘴𝘵 𝘸𝘰𝘳𝘬—𝘪𝘵 𝘸𝘢𝘴 𝘱𝘢𝘴𝘴𝘪𝘰𝘯 𝘮𝘢𝘯𝘪𝘧𝘦𝘴𝘵𝘦𝘥.
+#Upload video footage for analysis
+Process the video through the detection pipeline
+Receive output images with tagged anomalies
+
+#Implementation Details
+
+Development timeframe: 2.5 months
+Built from the ground up
+Includes custom data collection and model training
+Features a complete pipeline from input to anomaly detection
+
+#Sample Results
+A demonstration video is included showing successful anomaly detection with tagged outputs.
+Current Status
+While the project demonstrates core functionality, there is potential for further enhancement and optimization. The current implementation serves as a proof of concept for sheep behavior monitoring systems.
+#Support
+For inquiries or assistance with implementation, please feel free to reach out.
+Let me know if you would like me to refine any specific section further!
