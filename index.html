@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload and Display</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f9; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+            color: #333; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        h1 { 
+            color: #444; 
+            margin-bottom: 20px; 
+        }
+        form { 
+            margin: 20px 0; 
+        }
+        .video-box, .image-box { 
+            width: 100%; 
+            max-width: 600px; 
+            margin: 20px auto; 
+            border: 2px dashed #ccc; 
+            border-radius: 8px; 
+            padding: 10px; 
+            background-color: #fafafa; 
+        }
+        video { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+        }
+        button, input[type="file"] { 
+            margin: 10px; 
+            padding: 10px 15px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            border: none; 
+            border-radius: 5px; 
+        }
+        button { 
+            background-color: #007BFF; 
+            color: #fff; 
+        }
+        button:hover { 
+            background-color: #0056b3; 
+        }
+        input[type="file"] { 
+            background-color: #e9ecef; 
+            color: #333; 
+            border: 1px solid #ccc; 
+        }
+        input[type="file"]:hover { 
+            background-color: #d6d8db; 
+        }
+        .image-box img { 
+            max-width: 100%; 
+            height: auto; 
+            margin: 10px 0; 
+            border-radius: 8px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload and Display Video</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*" required>
+            <button type="submit">Upload Video</button>
+        </form>
+        <div class="video-box">
+            {% if video_path %}
+                <video controls>
+                    <source src="{{ video_path }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% else %}
+                <p>No video uploaded yet.</p>
+            {% endif %}
+        </div>
+        <form action="/predict" method="post">
+            <button type="submit">Predict</button>
+        </form>
+        {% if anomaly_images %}
+        <div class="image-box">
+            <h2>Anomaly Detected Image</h2>
+            {% for img_path in anomaly_images %}
+                <img src="{{ img_path }}" alt="Anomaly Image">
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
